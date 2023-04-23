@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>One-Time Login</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width" , initial-scale=1>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css" type="text/css">
 </head>
+
 <body>
-	<h1>Login</h1>
-	<form>
-		<label for="login-username">Username:</label>
-		<input type="text" id="login-username" name="login-username">
+    <center>
+        <form>
+            <br>
+            <br>
+            <fieldset style="border-radius: 50px;
+            background: #ffffff;
+            box-shadow:  6px 6px 12px #f2eeee,
+                         -6px -6px 12px #f2eeee; width: 30%; border-radius:2%">
+                <br>
+                <h1>Login</h1>
+                <p>Enter your one-time username and password to log in.</p>
+                <div class=" form-group ">
+                    <label for="lblusername" class="form-label mt-4 ">Username</label>
+                    <input style="width: 50%;" type="text" class="form-control " id="username" name="username">
+                </div>
 
-		<label for="login-password">Password:</label>
-		<input type="password" id="login-password" name="login-password">
+                <div class="form-group">
+                    <label for="lblpassword" class="form-label mt-4">Password</label>
+                    <input style="width: 50%;" type="password" class="form-control " id="password" name="password">
+                </div>
+                <br>
+                <button type="button" id="login-btn" class="btn btn-primary">Login</button>
+                <p>Don't have an account yet? <a href="index.html" style="text-decoration: none;">Generate Account</a>.</p>
+            </fieldset>
+        </form>
+        <script>
+            // Get the login button
+            var loginBtn = document.getElementById("login-btn");
 
-		<button id="login-btn" type="button">Login</button>
-	</form>
+            // Add a click event listener to the login button
+            loginBtn.addEventListener("click", function() {
+                // Get the entered username and password
+                var enteredUsername = document.getElementById("username").value;
+                var enteredPassword = document.getElementById("password").value;
 
-	<script src="script.js"></script>
+                // Get the stored username and password from localStorage
+                var storedUsername = localStorage.getItem("username");
+                var storedPassword = localStorage.getItem("password");
+
+                // Check if the entered username and password match the stored username and password
+                if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+                    // Redirect to the welcome page if the login is successful
+                    window.location.href = "welcome.html";
+                } else {
+                    // Show an error message if the login fails
+                    alert("Invalid username or password. Please try again.");
+                }
+            });
+
+            // Get the register button
+            var registerBtn = document.getElementById("register-btn");
+
+            // Add a click event listener to the register button
+            registerBtn.addEventListener("click", function() {
+                // Redirect to the registration page
+                window.location.href = "index.html";
+            });
+        </script>
+    </center>
+    <style>
+        p {
+            font-size: 17x;
+        }
+    </style>
 </body>
+
 </html>

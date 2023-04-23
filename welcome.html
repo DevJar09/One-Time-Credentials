@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>One-Time Login</title>
-</head>
-<body>
-	<h1>Welcome</h1>
-	<p>You have successfully logged in.</p>
-	<button id="logout-btn" type="button">Logout</button>
 
-	<script src="script.js"></script>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width" , initial-scale=1>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css" type="text/css">
+</head>
+
+<body>
+    <center>
+        <br>
+        <br>
+        <fieldset style="border-radius: 50px;
+        background: #ffffff;
+        box-shadow:  6px 6px 12px #f2eeee,
+                     -6px -6px 12px #f2eeee; width: 30%; border-radius:2%">
+            <br>
+            <h1>Welcome!</h1>
+            <p>You have successfully logged in.</p>
+
+            <p>Submitted by : Jaru Angelo D. Roces</p>
+            <p>Yr. & Sec. : BSCS 2-C</p>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>SubmittedTo : Ma'am Arlene Evangelista</p>
+            <button class="btn btn-primary" id="logout-btn" onclick="logout()">Logout</button>
+            <br>
+            <br>
+            <script src="script.js"></script>
+        </fieldset>
+    </center>
+    <style>
+        p {
+            font-size: 25px;
+        }
+    </style>
 </body>
+
 </html>

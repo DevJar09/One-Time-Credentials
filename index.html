@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width" , initial-scale=1>
+    <title>One-Time Login</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css" type="text/css">
+</head>
+
+<body>
+    <center>
+        <form>
+            <br>
+            <br>
+            <fieldset style="border-radius: 50px;
+            background: #ffffff;
+            box-shadow:  6px 6px 12px #f2eeee,
+                         -6px -6px 12px #f2eeee; width: 30%; border-radius:2%">
+                <br>
+                <h1>Create Account</h1>
+                <p>Click the button below to generate your one-time username and password.</p>
+                <p>Your One-Time Generated Account : </p>
+                <div class=" form-group ">
+                    <label for="lblusername" class="form-label mt-4 ">Username</label>
+                    <input style="width: 50%;" type="text" class="form-control " id="username" name="username" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="lblpassword" class="form-label mt-4">Password</label>
+                    <input style="width: 50%;" type="text" class="form-control " id="password" name="password" readonly>
+                </div>
+
+                <br>
+                <button type="button" id="generate-btn" class="btn btn-primary">Generate Account</button>
+                <br>
+                <p>Already have an account?<a href="login.html" style="text-decoration: none; "> Go to login page</a>.</p>
+            </fieldset>
+        </form>
+        <script src="script.js "></script>
+    </center>
+    <style>
+        p {
+            font-size: 17x;
+        }
+    </style>
+</body>
+
+</html>
